@@ -1,0 +1,33 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: provider
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://192.168.10.10:13306/provider?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: Abcd1234..
+
+  redis:
+    cluster:
+      hosts: 192.168.10.10:16379,192.168.10.10:16380,192.168.10.10:16479,192.168.10.10:16480,192.168.10.10:16579,192.168.10.10:16580
+#eureka:
+#  client:
+#    #    true表示将自己注册到eureka
+#    registerWithEureka: true
+#    #    true表示eureka上抓取注册的服务信息。默认为true.
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: http://localhost:7001/eureka/
+#  instance:
+#    instanceId: provider1
+##    ip地址可以显示
+#    preferIpAddress: true
+
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.suber.common.entities

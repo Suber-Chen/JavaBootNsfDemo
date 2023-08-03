@@ -1,6 +1,10 @@
 server:
   port: 8001
 
+provider:
+  cookie:
+    maxAge: 10
+
 spring:
   application:
     name: provider

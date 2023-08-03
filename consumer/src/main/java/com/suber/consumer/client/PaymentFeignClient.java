@@ -6,6 +6,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * @author suber
  * 2023/5/6 0:44
@@ -31,4 +34,10 @@ public interface PaymentFeignClient {
 
     @GetMapping("/error/fail")
     public CommonResultCode providerErrorMust();
+    @GetMapping("/header/cookie")
+    public CommonResultCode providerHeaderCookie(HttpServletRequest request,HttpServletResponse response);
+    @GetMapping("/header/header")
+    public CommonResultCode providerHeaderHeader(HttpServletRequest request,HttpServletResponse response);
+    @GetMapping("/header/param")
+    public CommonResultCode providerHeaderParam(HttpServletRequest request,HttpServletResponse response);
 }

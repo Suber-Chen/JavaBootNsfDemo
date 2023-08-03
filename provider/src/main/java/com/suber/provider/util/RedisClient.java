@@ -22,7 +22,7 @@ import java.util.Set;
 @Component
 public class RedisClient {
     @Value("${spring.redis.cluster.hosts}")
-    static String hosts;
+    String hosts;
     // 设置最大连接数
     public JedisCluster getConnect() {
         String[] sockets = hosts.split(",");

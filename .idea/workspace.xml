@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ad3d275b-75ee-4933-99eb-d3b4842e50ca" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/controller/HeaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/controller/HeaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/util/RedisClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/util/RedisClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -13,6 +13,8 @@ public interface PaymentService {
 
     public Payment getPaymentById(@Param("id") Long id);
 
+    public int updatePaymentById(Payment payment);
+
     public String paymentInfo();
 
     public String paymentTimeout(Integer timeout);

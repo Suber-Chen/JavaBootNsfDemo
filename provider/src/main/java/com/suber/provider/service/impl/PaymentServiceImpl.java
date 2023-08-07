@@ -4,6 +4,7 @@ import com.suber.common.entities.CommonResultCode;
 import com.suber.common.entities.Counter;
 import com.suber.common.entities.Payment;
 import com.suber.provider.dao.PaymentDao;
+import com.suber.provider.mapper.PaymentMapper;
 import com.suber.provider.service.PaymentService;
 import com.sun.org.apache.bcel.internal.generic.NEW;
 import lombok.extern.slf4j.Slf4j;
@@ -21,18 +22,35 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class PaymentServiceImpl implements PaymentService {
 
+//    @Autowired
+//    private PaymentDao paymentDao;
+
     @Autowired
-    private PaymentDao paymentDao;
+    private PaymentMapper paymentMapper;
+//    @Override
+//    public int create(Payment payment) {
+//        return paymentDao.create(payment);
+//    }
 
     @Override
     public int create(Payment payment) {
-        return paymentDao.create(payment);
+        return paymentMapper.insert(payment);
+    }
+
+//    @Override
+//    public Payment getPaymentById(Long id) {
+//        return paymentDao.getPaymentById(id);
+//    }
+        @Override
+    public Payment getPaymentById(Long id) {
+        return paymentMapper.selectById(id);
     }
 
     @Override
-    public Payment getPaymentById(Long id) {
-        return paymentDao.getPaymentById(id);
+    public int updatePaymentById(Payment payment) {
+        return paymentMapper.updateById(payment);
     }
+
 
     @Override
     public String paymentInfo() {

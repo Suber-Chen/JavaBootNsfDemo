@@ -52,4 +52,20 @@ public class MysqlController {
         }
 
     }
+
+    @GetMapping("/update")
+    public CommonResultCode updatePaymentById(@RequestBody Payment payment) {
+
+        int i = paymentService.updatePaymentById(payment);
+        log.info("开始更新：" + payment);
+
+        if (i > 0) {
+            log.info("更新成功:" );
+            return new CommonResultCode<>(200, "更新数据库成功:" , payment);
+        } else {
+            log.error("更新失败");
+            return new CommonResultCode(500, "更新数据库失败！");
+        }
+
+    }
 }

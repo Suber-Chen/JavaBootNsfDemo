@@ -32,6 +32,10 @@ spring:
 #    preferIpAddress: true
 
 
-mybatis:
-  mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.suber.common.entities
+#mybatis:
+#  mapperLocations: classpath:mapper/*.xml
+#  type-aliases-package: com.suber.common.entities
+## 配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

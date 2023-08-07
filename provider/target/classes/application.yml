@@ -14,6 +14,10 @@ spring:
   redis:
     cluster:
       hosts: 192.168.10.10:16379,192.168.10.10:16380,192.168.10.10:16479,192.168.10.10:16480,192.168.10.10:16579,192.168.10.10:16580
+    maxTotal: 100
+    maxIdle: 10
+    minIdle: 0
+
 #eureka:
 #  client:
 #    #    true表示将自己注册到eureka
@@ -28,6 +32,10 @@ spring:
 #    preferIpAddress: true
 
 
-mybatis:
-  mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.suber.common.entities
+#mybatis:
+#  mapperLocations: classpath:mapper/*.xml
+#  type-aliases-package: com.suber.common.entities
+## 配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

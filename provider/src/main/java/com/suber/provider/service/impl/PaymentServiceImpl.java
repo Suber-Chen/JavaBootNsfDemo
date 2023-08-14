@@ -33,64 +33,7 @@ public class PaymentServiceImpl implements PaymentService {
 //    }
 
     @Override
-    public int create(Payment payment) {
-        return paymentMapper.insert(payment);
-    }
-
-//    @Override
-//    public Payment getPaymentById(Long id) {
-//        return paymentDao.getPaymentById(id);
-//    }
-        @Override
-    public Payment getPaymentById(Long id) {
-        return paymentMapper.selectById(id);
-    }
-
-    @Override
-    public int updatePaymentById(Payment payment) {
-        return paymentMapper.updateById(payment);
-    }
-
-
-    @Override
     public String paymentInfo() {
         return "provider 线程池: " + Thread.currentThread().getName() + "\t";
     }
-
-
-    @Override
-    public String paymentTimeout(Integer timeout) {
-        try {
-            TimeUnit.SECONDS.sleep(timeout);
-        } catch (InterruptedException e) {
-            log.error("timeout\t====》\t超时时间输入有误");
-            throw new RuntimeException(e);
-        }
-        return "provider 线程池: " + Thread.currentThread().getName() + " 耗时" + timeout + "秒\t";
-    }
-
-
-    Counter counter = new Counter();
-
-    @Override
-    public String paymentFail() {
-        int num = counter.getNumber();
-        num--;
-        counter.setNumber(num);
-        log.info("num = " + num);
-        if (num == 0) {
-            counter.setNumber(5);
-            int j = 1 / 0;
-        }
-        return "provider 线程池: " + Thread.currentThread().getName() + "剩余" + num + "次请求会触发错误\t";
-    }
-
-    @Override
-    public String paymentFailMust() {
-        log.error("provider 必现错误");
-        int i = 1 / 0;
-        return null;
-    }
-
-
 }

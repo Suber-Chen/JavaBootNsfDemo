@@ -9,18 +9,8 @@ import org.apache.ibatis.annotations.Param;
  * 2023/4/25 0:34
  */
 public interface PaymentService {
-    public int create(Payment payment);
-
-    public Payment getPaymentById(@Param("id") Long id);
-
-    public int updatePaymentById(Payment payment);
 
     public String paymentInfo();
 
-    public String paymentTimeout(Integer timeout);
-
-    public String paymentFail();
-
-    public String paymentFailMust();
 
 }

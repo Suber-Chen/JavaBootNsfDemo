@@ -14,21 +14,36 @@ import org.springframework.web.bind.annotation.*;
 @FeignClient(value = "PROVIDER")
 @RequestMapping("/provider")
 public interface PaymentFeignClient {
-    @PostMapping("/mysql/create")
-    public CommonResultCode create(@RequestBody Payment payment);
-
-    @GetMapping("/mysql/get")
-    public CommonResultCode getPaymentById(@RequestParam(value = "id") Long id);
-
-    @GetMapping("/error/timeout")
-    public CommonResultCode providerTimeout(@RequestParam(value = "timeout") Integer timeout);
-
     @GetMapping("/info/info")
     public CommonResultCode providerInfo();
 
     @GetMapping("/error/error")
     public CommonResultCode providerError();
 
+    @GetMapping("/error/timeout")
+    public CommonResultCode providerTimeout(@RequestParam(value = "timeout") Integer timeout);
+
+    @PostMapping("/mysql/insert")
+    public CommonResultCode InsertPayment(@RequestBody Payment payment);
+
+    @GetMapping("/mysql/delete")
+    public CommonResultCode deletePaymentById(@RequestParam(value = "id") Long id);
+
+    @GetMapping("/mysql/update")
+    public CommonResultCode updatePayment(@RequestParam(value = "id") Long id);
+
+    @GetMapping("/mysql/select")
+    public CommonResultCode selectPaymentById(@RequestParam(value = "id") Long id);
+
     @GetMapping("/error/fail")
     public CommonResultCode providerErrorMust();
+
+    @GetMapping("/router/header")
+    public CommonResultCode getHeader();
+
+    @GetMapping("/router/cookie")
+    public CommonResultCode getCookie();
+
+    @GetMapping("/router/param")
+    public CommonResultCode getParam();
 }

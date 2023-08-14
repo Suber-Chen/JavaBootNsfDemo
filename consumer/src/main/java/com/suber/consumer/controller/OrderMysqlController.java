@@ -29,7 +29,56 @@ public class OrderMysqlController {
      */
     @Resource
     private PaymentFeignClient client;
+    /**
+     * 通过id 查询provider中的数据, openFeign 使用get请求调用provider
+     * 通过provider查mysql数据库
+     * @param id
+     * @return
+     */
+    @GetMapping("/select")
+    public CommonResultCode<Payment> selectFeign(@RequestParam(value = "id") Long id) {
+        log.info("调用provider select接口...");
+        return client.selectPaymentById(id);
+    }
 
+
+    /**
+     * 插入新的数据  openFeign 使用post请求调用provider
+     * 通过provider查mysql数据库
+     * @param payment
+     * @return
+     */
+    @PostMapping("/insert")
+    public CommonResultCode<Payment> insertFeign(@RequestBody Payment payment) {
+        log.info("调用provider insert接口...");
+        return client.InsertPayment(payment);
+    }
+
+    /**
+     * 删除数据  openFeign 使用DELETE请求调用provider
+     * 通过provider查mysql数据库
+     * @param id
+     * @return
+     */
+
+    @DeleteMapping("/delete")
+    public CommonResultCode<Payment> deleteFegin(@RequestParam(value = "id") Long id){
+        log.info("调用provider delete接口...");
+        return client.deletePaymentById(id);
+    }
+
+    /**
+     * 更新数据  openFeign 使用DELETE请求调用provider
+     * 通过provider查mysql数据库
+     * @param id
+     * @return
+     */
+
+    @DeleteMapping("/update")
+    public CommonResultCode<Payment> updateFegin(@RequestParam(value = "id") Long id){
+        log.info("调用provider update接口...");
+        return client.updatePayment(id);
+    }
 
     /**
      * 通过id 查询provider中的数据, restTemp 使用get请求调用provider
@@ -37,10 +86,10 @@ public class OrderMysqlController {
      * @param id
      * @return
      */
-    @GetMapping("/get")
+    @GetMapping("/selectTemp")
     public CommonResultCode<Payment> getPaymentById(@RequestParam(value = "id") Long id) {
         log.info("调用provider get接口...");
-        return restTemplate.getForObject(REMOTE_ADDR + "/provider/mysql/get?id={id}", CommonResultCode.class, id);
+        return restTemplate.getForObject(REMOTE_ADDR + "/provider/mysql/select?id={id}", CommonResultCode.class, id);
     }
 
 
@@ -50,10 +99,10 @@ public class OrderMysqlController {
      * @param payment
      * @return
      */
-    @GetMapping("/create")
+    @PostMapping("/insertTemp")
     public CommonResultCode<Payment> create(@RequestBody Payment payment) {
         log.info("调用provider create接口...");
-        return restTemplate.postForObject(REMOTE_ADDR + "/provider/mysql/create", payment, CommonResultCode.class);
+        return restTemplate.postForObject(REMOTE_ADDR + "/provider/mysql/insert", payment, CommonResultCode.class);
     }
 
     /**
@@ -63,9 +112,9 @@ public class OrderMysqlController {
      * @param id
      * @return
      */
-    @GetMapping("/getEntity")
+    @GetMapping("/selectEntity")
     public CommonResultCode<Payment> getEntity(@RequestParam(value = "id") Long id) {
-        ResponseEntity<CommonResultCode> forEntity = restTemplate.getForEntity(REMOTE_ADDR + "/provider/mysql/get?id={id}", CommonResultCode.class, id);
+        ResponseEntity<CommonResultCode> forEntity = restTemplate.getForEntity(REMOTE_ADDR + "/provider/mysql/select?id={id}", CommonResultCode.class, id);
         if (forEntity.getStatusCode().is2xxSuccessful()) {
             log.info(String.valueOf(forEntity.getBody()));
             return forEntity.getBody();
@@ -82,9 +131,9 @@ public class OrderMysqlController {
      * @param payment
      * @return
      */
-    @GetMapping("/createEntity")
+    @PostMapping("/insertEntity")
     public CommonResultCode<Payment> createEntity(@RequestBody Payment payment) {
-        ResponseEntity<CommonResultCode> body = restTemplate.postForEntity(REMOTE_ADDR + "/provider/mysql/create", payment, CommonResultCode.class);
+        ResponseEntity<CommonResultCode> body = restTemplate.postForEntity(REMOTE_ADDR + "/provider/mysql/insert", payment, CommonResultCode.class);
         if (body.getStatusCode().is2xxSuccessful()) {
             log.info(String.valueOf(body.getBody()));
             return body.getBody();
@@ -93,31 +142,5 @@ public class OrderMysqlController {
             return new CommonResultCode<>(502, "服务异常...");
         }
 
-    }
-
-
-    /**
-     * 通过id 查询provider中的数据, openFeign 使用get请求调用provider
-     * 通过provider查mysql数据库
-     * @param id
-     * @return
-     */
-    @GetMapping("/getFeign")
-    public CommonResultCode<Payment> getFeign(@RequestParam(value = "id") Long id) {
-        log.info("调用provider get接口...");
-        return client.getPaymentById(id);
-    }
-
-
-    /**
-     * 插入新的数据  openFeign 使用post请求调用provider
-     * 通过provider查mysql数据库
-     * @param payment
-     * @return
-     */
-    @GetMapping("/createFeign")
-    public CommonResultCode<Payment> createFeign(@RequestBody Payment payment) {
-        log.info("调用provider create接口...");
-        return client.create(payment);
     }
 }

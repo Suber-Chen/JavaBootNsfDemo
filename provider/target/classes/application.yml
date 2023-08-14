@@ -18,18 +18,18 @@ spring:
     maxIdle: 10
     minIdle: 0
 
-#eureka:
-#  client:
-#    #    true表示将自己注册到eureka
-#    registerWithEureka: true
-#    #    true表示eureka上抓取注册的服务信息。默认为true.
-#    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://localhost:7001/eureka/
-#  instance:
-#    instanceId: provider1
-##    ip地址可以显示
-#    preferIpAddress: true
+eureka:
+  client:
+    #    true表示将自己注册到eureka
+    registerWithEureka: true
+    #    true表示eureka上抓取注册的服务信息。默认为true.
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instanceId: provider1
+#    ip地址可以显示
+    preferIpAddress: true
 
 
 #mybatis:

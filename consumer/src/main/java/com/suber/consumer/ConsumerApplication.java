@@ -7,14 +7,14 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication
-@EnableEurekaClient
 /**
  * name : provider 的服务名
  * configuration : 负载规则的加载类
  */
-//@RibbonClient(name = "PROVIDER",configuration = MyRule.class)
+@RibbonClient(name = "PROVIDER",configuration = MyRule.class)
 @EnableFeignClients
+@SpringBootApplication
+@EnableEurekaClient
 public class ConsumerApplication {
 
     public static void main(String[] args) {

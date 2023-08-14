@@ -6,6 +6,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * @author suber
  * 2023/5/6 0:44
@@ -23,27 +26,27 @@ public interface PaymentFeignClient {
     @GetMapping("/error/timeout")
     public CommonResultCode providerTimeout(@RequestParam(value = "timeout") Integer timeout);
 
+    @GetMapping("/error/fail")
+    public CommonResultCode providerErrorMust();
+
     @PostMapping("/mysql/insert")
     public CommonResultCode InsertPayment(@RequestBody Payment payment);
 
-    @GetMapping("/mysql/delete")
+    @DeleteMapping("/mysql/delete")
     public CommonResultCode deletePaymentById(@RequestParam(value = "id") Long id);
 
-    @GetMapping("/mysql/update")
+    @PostMapping("/mysql/update")
     public CommonResultCode updatePayment(@RequestParam(value = "id") Long id);
 
     @GetMapping("/mysql/select")
     public CommonResultCode selectPaymentById(@RequestParam(value = "id") Long id);
 
-    @GetMapping("/error/fail")
-    public CommonResultCode providerErrorMust();
-
     @GetMapping("/router/header")
-    public CommonResultCode getHeader();
+    public CommonResultCode getHeader(@RequestParam(value = "request")HttpServletRequest request, @RequestParam(value = "response")HttpServletResponse response);
 
     @GetMapping("/router/cookie")
-    public CommonResultCode getCookie();
+    public CommonResultCode getCookie(@RequestParam(value = "request")HttpServletRequest request, @RequestParam(value = "response")HttpServletResponse response);
 
     @GetMapping("/router/param")
-    public CommonResultCode getParam();
+    public CommonResultCode getParam(@RequestParam(value = "request")HttpServletRequest request, @RequestParam(value = "response")HttpServletResponse response);
 }

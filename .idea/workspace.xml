@@ -116,6 +116,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.suber.gateway.GatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Provider2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="provider2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.suber.provider2.Provider2Application" />
@@ -130,6 +137,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ConsumerApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
+      <item itemvalue="Spring Boot.Provider2Application" />
+      <item itemvalue="Spring Boot.ProviderApplication" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -159,6 +173,7 @@
       <workItem from="1691826073007" duration="11017000" />
       <workItem from="1692019670220" duration="6114000" />
       <workItem from="1692026166590" duration="2906000" />
+      <workItem from="1692411437497" duration="10416000" />
     </task>
     <servers />
   </component>

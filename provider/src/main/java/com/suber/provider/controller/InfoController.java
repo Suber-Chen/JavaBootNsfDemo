@@ -1,6 +1,7 @@
 package com.suber.provider.controller;
 
 import com.suber.common.entities.CommonResultCode;
+import com.suber.provider.client.ProviderTwoClient;
 import com.suber.provider.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class InfoController {
     @Autowired
     private PaymentService paymentService;
 
+    @Autowired
+    private ProviderTwoClient providerTwoClient;
 
     @GetMapping("/info")
     public CommonResultCode paymentInfo() {
@@ -25,6 +28,12 @@ public class InfoController {
 
         return new CommonResultCode(200, "查询成功！");
     }
+
+    @GetMapping("/provider2")
+    public CommonResultCode provider2Info() {
+        return providerTwoClient.getProvider2Info();
+    }
+
 
 
 }

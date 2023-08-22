@@ -30,14 +30,6 @@ public interface PaymentFeignClient {
 
     @GetMapping("/error/fail")
     public CommonResultCode providerErrorMust();
-<<<<<<< HEAD
-    @GetMapping("/header/cookie")
-    public CommonResultCode providerHeaderCookie(HttpServletRequest request,HttpServletResponse response);
-    @GetMapping("/header/header")
-    public CommonResultCode providerHeaderHeader(HttpServletRequest request,HttpServletResponse response);
-    @GetMapping("/header/param")
-    public CommonResultCode providerHeaderParam(HttpServletRequest request,HttpServletResponse response);
-=======
 
     @PostMapping("/mysql/insert")
     public CommonResultCode InsertPayment(@RequestBody Payment payment);
@@ -59,5 +51,4 @@ public interface PaymentFeignClient {
 
     @GetMapping("/router/param")
     public CommonResultCode getParam(@RequestParam(value = "request")HttpServletRequest request, @RequestParam(value = "response")HttpServletResponse response);
->>>>>>> 4169d69d3678af5c614e54a1c7eba619cd33122e
 }

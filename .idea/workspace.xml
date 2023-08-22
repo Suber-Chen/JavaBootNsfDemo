@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7921596b-bf3b-4a7a-849f-7dee7d6b7a60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/JavaBootNsfDemo.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/18a116bb-3507-4172-b6a3-1a9d480a0c7c.xml" afterDir="false" />
@@ -13,17 +12,13 @@
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/18a116bb-3507-4172-b6a3-1a9d480a0c7c/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/18a116bb-3507-4172-b6a3-1a9d480a0c7c/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/18a116bb-3507-4172-b6a3-1a9d480a0c7c/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/config/BasicAuthRequestInterceptor.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/deployment.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/suber/gateway/GatewayApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/suber/gateway/filter/InnerLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/test/java/com/suber/gateway/GatewayApplicationTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway/target/classes/application.yml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway/target/classes/com/suber/gateway/GatewayApplication.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/gateway/target/classes/com/suber/gateway/filter/InnerLog.class" afterDir="false" />
@@ -62,6 +57,7 @@
       <change afterPath="$PROJECT_DIR$/调用nsf-demo.postman_collection.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
@@ -69,12 +65,14 @@
       <change beforePath="$PROJECT_DIR$/common/target/classes/com/suber/common/entities/CommonResultCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/classes/com/suber/common/entities/CommonResultCode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/common/target/common-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/ConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/ConsumerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/client/PaymentFeignClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/client/PaymentFeignClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/config/OpenFeignConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/config/OpenFeignConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/HeaderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/HeaderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/InfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/InfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/OrderMysqlController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/OrderMysqlController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/java/com/suber/consumer/controller/RouterController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consumer/src/test/java/com/suber/consumer/ConsumerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/src/test/java/com/suber/consumer/ConsumerApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/target/classes/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/target/classes/com/suber/consumer/ConsumerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/target/classes/com/suber/consumer/ConsumerApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/target/classes/com/suber/consumer/client/PaymentFeignClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/consumer/target/classes/com/suber/consumer/client/PaymentFeignClient.class" afterDir="false" />
@@ -91,6 +89,10 @@
       <change beforePath="$PROJECT_DIR$/consumer/target/surefire-reports/2023-06-10T18-54-23_496.dumpstream" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/target/surefire-reports/TEST-com.suber.consumer.ConsumerApplicationTests.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/consumer/target/surefire-reports/com.suber.consumer.ConsumerApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/suber/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/suber/gateway/GatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/test/java/com/suber/gateway/GatewayApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/test/java/com/suber/gateway/GatewayApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/provider/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/ProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/ProviderApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/controller/ErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/provider/src/main/java/com/suber/provider/controller/ErrorController.java" afterDir="false" />
@@ -132,6 +134,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -140,7 +149,108 @@
     "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.ProviderApplication">
+    <configuration name="ConsumerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suber.consumer.ConsumerApplication" />
+      <module name="consumer" />
+      <option name="PROGRAM_PARAMETERS" value="-javaagent:D:\netease\springcloud-agent\nsf-boot.jar=consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suber.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EurekaApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suber.eureka.EurekaApplication" />
+      <module name="eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suber.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProviderApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.suber.provider.ProviderApplication" />
+      <module name="provider" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suber.provider.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConsumerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suber.consumer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.suber.consumer" />
+      <option name="MAIN_CLASS_NAME" value="com.suber.consumer.ConsumerApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="gateway" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.suber.gateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.suber.gateway" />
+      <option name="MAIN_CLASS_NAME" value="com.suber.gateway.GatewayApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.ProviderApplication" />
+      <item itemvalue="Application.EurekaApplication" />
+      <item itemvalue="Application.ConsumerApplication" />
+      <item itemvalue="JUnit.ConsumerApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.GatewayApplicationTests.contextLoads" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ProviderApplication" />
+        <item itemvalue="Application.ConsumerApplication" />
+        <item itemvalue="Application.EurekaApplication" />
+        <item itemvalue="JUnit.GatewayApplicationTests.contextLoads" />
+        <item itemvalue="JUnit.ConsumerApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

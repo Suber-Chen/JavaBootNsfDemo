@@ -11,9 +11,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.10.10:13306/provider?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: Abcd1234..
+    url: jdbc:mysql://172.17.247.238:2002/provider?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: mys_o1d9p0_rw
+    password: B0dzw3oeGbXgkyF
 
   redis:
     cluster:
@@ -21,22 +21,6 @@ spring:
     maxTotal: 100
     maxIdle: 10
     minIdle: 0
-<<<<<<< HEAD
-
-#eureka:
-#  client:
-#    #    true表示将自己注册到eureka
-#    registerWithEureka: true
-#    #    true表示eureka上抓取注册的服务信息。默认为true.
-#    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://localhost:7001/eureka/
-#  instance:
-#    instanceId: provider1
-##    ip地址可以显示
-#    preferIpAddress: true
-=======
->>>>>>> 4169d69d3678af5c614e54a1c7eba619cd33122e
 
 eureka:
   client:

@@ -11,9 +11,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: org.gjt.mm.mysql.Driver
-    url: jdbc:mysql://192.168.10.10:13306/provider?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
-    username: root
-    password: Abcd1234..
+    url: jdbc:mysql://172.17.247.238:2002/provider?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: mys_o1d9p0_rw
+    password: B0dzw3oeGbXgkyF
 
   redis:
     cluster:

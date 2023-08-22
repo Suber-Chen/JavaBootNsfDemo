@@ -94,4 +94,9 @@ public class InfoController {
         return new CommonResultCode<>(200,"归零 consumer 计数器");
     }
 
+    @GetMapping("/provider2")
+    public CommonResultCode<Payment> provider2Info() {
+        return client.provider2Info();
+    }
+
 }

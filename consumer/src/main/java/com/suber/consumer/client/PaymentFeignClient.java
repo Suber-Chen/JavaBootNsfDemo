@@ -14,30 +14,50 @@ import javax.servlet.http.HttpServletResponse;
  * 2023/5/6 0:44
  */
 @Component
-@FeignClient(value = "PROVIDER")
+@FeignClient(value = "provider")
 @RequestMapping("/provider")
 public interface PaymentFeignClient {
-    @PostMapping("/mysql/create")
-    public CommonResultCode create(@RequestBody Payment payment);
-
-    @GetMapping("/mysql/get")
-    public CommonResultCode getPaymentById(@RequestParam(value = "id") Long id);
-
-    @GetMapping("/error/timeout")
-    public CommonResultCode providerTimeout(@RequestParam(value = "timeout") Integer timeout);
-
     @GetMapping("/info/info")
     public CommonResultCode providerInfo();
+    @GetMapping("/info/provider2")
+    public CommonResultCode provider2Info();
 
     @GetMapping("/error/error")
     public CommonResultCode providerError();
 
+    @GetMapping("/error/timeout")
+    public CommonResultCode providerTimeout(@RequestParam(value = "timeout") Integer timeout);
+
     @GetMapping("/error/fail")
     public CommonResultCode providerErrorMust();
+<<<<<<< HEAD
     @GetMapping("/header/cookie")
     public CommonResultCode providerHeaderCookie(HttpServletRequest request,HttpServletResponse response);
     @GetMapping("/header/header")
     public CommonResultCode providerHeaderHeader(HttpServletRequest request,HttpServletResponse response);
     @GetMapping("/header/param")
     public CommonResultCode providerHeaderParam(HttpServletRequest request,HttpServletResponse response);
+=======
+
+    @PostMapping("/mysql/insert")
+    public CommonResultCode InsertPayment(@RequestBody Payment payment);
+
+    @DeleteMapping("/mysql/delete")
+    public CommonResultCode deletePaymentById(@RequestParam(value = "id") Long id);
+
+    @PostMapping("/mysql/update")
+    public CommonResultCode updatePayment(@RequestParam(value = "id") Long id);
+
+    @GetMapping("/mysql/select")
+    public CommonResultCode selectPaymentById(@RequestParam(value = "id") Long id);
+
+    @GetMapping("/router/header")
+    public CommonResultCode getHeader(@RequestParam(value = "request")HttpServletRequest request, @RequestParam(value = "response")HttpServletResponse response);
+
+    @GetMapping("/router/cookie")
+    public CommonResultCode getCookie(@RequestParam(value = "request")HttpServletRequest request, @RequestParam(value = "response")HttpServletResponse response);
+
+    @GetMapping("/router/param")
+    public CommonResultCode getParam(@RequestParam(value = "request")HttpServletRequest request, @RequestParam(value = "response")HttpServletResponse response);
+>>>>>>> 4169d69d3678af5c614e54a1c7eba619cd33122e
 }

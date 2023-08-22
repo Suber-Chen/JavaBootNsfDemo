@@ -1,0 +1,620 @@
+{
+	"info": {
+		"_postman_id": "118e19b2-e5d1-47d7-a317-2f37daa60bcf",
+		"name": "调用nsf-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26922227",
+		"_collection_link": "https://bold-firefly-17916.postman.co/workspace/Team-Workspace~a97b9926-b68d-4118-8b69-3de1ab4430c1/collection/26922227-118e19b2-e5d1-47d7-a317-2f37daa60bcf?action=share&source=collection_link&creator=26922227"
+	},
+	"item": [
+		{
+			"name": "provider-->provider  :   info",
+			"item": [
+				{
+					"name": "info",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8001/provider/info/info"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "provider-->provider  :   mysql",
+			"item": [
+				{
+					"name": "insert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"serial\":\"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8001/provider/mysql/insert"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/provider/mysql/delete?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"mysql",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"serial\":\"111111111111111111111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8001/provider/mysql/update"
+					},
+					"response": []
+				},
+				{
+					"name": "select",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8001/provider/mysql/select?id=1690293252047089666",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"mysql",
+								"select"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1690293252047089666"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "provider-->provider  :   error",
+			"item": [
+				{
+					"name": "timeout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8001/provider/error/timeout"
+					},
+					"response": []
+				},
+				{
+					"name": "error",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8001/provider/error/error"
+					},
+					"response": []
+				},
+				{
+					"name": "fail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8001/provider/error/fail"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "provider-->provider  :   redis",
+			"item": [
+				{
+					"name": "set(string)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "sssssssssss",
+								"value": "123123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8001/provider/redis/set?key=name&value=suber",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"set"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "name"
+								},
+								{
+									"key": "value",
+									"value": "suber"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get(string)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sssssssssss",
+								"value": "123123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8001/provider/redis/get?key=name",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"get"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "name"
+								},
+								{
+									"key": "value",
+									"value": "suber",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sethash(hash map)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"aaaaaaaaaaaaaaaaaaaaaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/sethash?key=vvvvvvv",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"sethash"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "vvvvvvv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gethash(hash map)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"suber\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/gethash?key=vvvvvvv",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"gethash"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "vvvvvvv"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lpush(list)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[1,2,3,4,5]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/lpush?key=eeeeeee",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"lpush"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "eeeeeee"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lrange(list)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"suber\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/lrange?key=eeeeeee",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"lrange"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "eeeeeee"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sadd(set)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"q\",\"w\",\"e\"]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/sadd?key=setste",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"sadd"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "setste"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "smembers(set)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"suber\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/smembers?key=setste",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"smembers"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "setste"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "zadd(sorted set)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"1q\",\"2w\",\"3e\",\"4r\",\"5t\"]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/zadd?key=zaddtest&num=3&value=3w",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"zadd"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "zaddtest"
+								},
+								{
+									"key": "num",
+									"value": "3"
+								},
+								{
+									"key": "value",
+									"value": "3w"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "zrange(sorted set)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"suber\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8001/provider/redis/zrange?key=zaddtest",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"redis",
+								"zrange"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "zaddtest"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "provider-->provider  :   router",
+			"item": [
+				{
+					"name": "header",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sssssssssss",
+								"value": "123123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8001/provider/router/header?header=123123",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"router",
+								"header"
+							],
+							"query": [
+								{
+									"key": "header",
+									"value": "123123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cookie",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sssssssssss",
+								"value": "123123",
+								"type": "text"
+							}
+						],
+						"url": "localhost:8001/provider/router/cookie"
+					},
+					"response": []
+				},
+				{
+					"name": "param",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "sssssssssss",
+								"value": "123123",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8001/provider/router/param?qwe=qwe&asd=asd&zxc=zxc",
+							"host": [
+								"localhost"
+							],
+							"port": "8001",
+							"path": [
+								"provider",
+								"router",
+								"param"
+							],
+							"query": [
+								{
+									"key": "qwe",
+									"value": "qwe"
+								},
+								{
+									"key": "asd",
+									"value": "asd"
+								},
+								{
+									"key": "zxc",
+									"value": "zxc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

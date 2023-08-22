@@ -8,7 +8,7 @@ import org.apache.ibatis.annotations.Param;
  * @author suber
  * 2023/4/25 0:10
  */
-@Mapper
+//@Mapper
 public interface PaymentDao {
     public int create(Payment payment);
     public Payment getPaymentById(@Param("id") Long id);

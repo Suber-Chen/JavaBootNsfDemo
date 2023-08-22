@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: agent-provider-v1
+  namespace: nsf-demo
+  labels:
+    app: provider
+    mod: agent
+    controller: deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: provider
+      mod: agent
+  template:
+    metadata:
+      labels:
+        app: provider
+        mod: agent
+    spec:
+      containers:
+      - command: ["/bin/bash"]
+        args: ["-c","java $JAVA_OPTS -jar /app/app.jar"]
+        env:
+        - name: JAVA_OPTS
+          value: javaagent
+            - name: test
+          image: basic-service-nsf:v1.0.0
+          imagePullPolicy: IfNotPresent

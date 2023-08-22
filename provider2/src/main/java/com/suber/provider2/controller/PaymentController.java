@@ -19,14 +19,12 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @Slf4j
-@RequestMapping("/provider")
+@RequestMapping("/provider2")
 public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
 
-    @Value("${eureka.instance.instanceId}")
-    private String host;
 
 
     @PostMapping("/create")
@@ -35,8 +33,7 @@ public class PaymentController {
 
         if (result > 0) {
             log.info("插入结果：" + payment);
-            log.info("插入数据库成功: " + host);
-            return new CommonResultCode<>(200, host + "\t:插入数据库成功！", payment);
+            return new CommonResultCode<>(200,  "\t:插入数据库成功！", payment);
         } else {
             log.error("插入数据库失败");
             return new CommonResultCode(500, "插入数据库失败！");
@@ -51,8 +48,8 @@ public class PaymentController {
         log.info("开始查询：" + paymentById);
 
         if (paymentById != null) {
-            log.info("查询到结果:" + host);
-            return new CommonResultCode<>(200, "查询到结果:" + host, paymentById);
+            log.info("查询到结果:" );
+            return new CommonResultCode<>(200, "查询到结果:" , paymentById);
         } else {
             log.error("查询不到结果");
             return new CommonResultCode(500, "未查询到结果！");

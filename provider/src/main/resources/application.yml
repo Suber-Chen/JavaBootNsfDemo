@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 provider:
   cookie:
@@ -22,20 +22,24 @@ spring:
     maxIdle: 10
     minIdle: 0
 
-#eureka:
-#  client:
-#    #    true表示将自己注册到eureka
-#    registerWithEureka: true
-#    #    true表示eureka上抓取注册的服务信息。默认为true.
-#    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://localhost:7001/eureka/
-#  instance:
-#    instanceId: provider1
-##    ip地址可以显示
-#    preferIpAddress: true
+eureka:
+  client:
+    #    true表示将自己注册到eureka
+    registerWithEureka: true
+    #    true表示eureka上抓取注册的服务信息。默认为true.
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instanceId: provider1
+#    ip地址可以显示
+    preferIpAddress: true
 
 
-mybatis:
-  mapperLocations: classpath:mapper/*.xml
-  type-aliases-package: com.suber.common.entities
+#mybatis:
+#  mapperLocations: classpath:mapper/*.xml
+#  type-aliases-package: com.suber.common.entities
+## 配置日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
